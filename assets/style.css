@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+
+.calculator {
+    width: 360px;
+    padding: 25px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+}
+
+/* Tela de Exibição */
+.display {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 15px;
+    margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.current-operand {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+
+.btn.operator {
+    background: rgba(255, 159, 10, 0.15);
+    color: #ff9f0a;
+}
+
+.btn.operator:hover {
+    background: rgba(255, 159, 10, 0.3);
+}
+
+
+.btn.equals {
+    background: #ff9f0a;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 159, 10, 0.4);
+}
+
+.btn.equals:hover {
+    background: #ffb03a;
+    box-shadow: 0 6px 20px rgba(255, 159, 10, 0.6);
+}
+
+
+.btn.clear, .btn.delete {
+    background: rgba(255, 69, 58, 0.15);
+    color: #ff453a;
+}
+
+.btn.clear:hover, .btn.delete:hover {
+    background: rgba(255, 69, 58, 0.3);
+}
+
+
+.col-span-2 {
+    grid-column: span 2;
+}
